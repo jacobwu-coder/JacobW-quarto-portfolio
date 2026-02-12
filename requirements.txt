@@ -1,0 +1,5 @@
+pyyaml
+jupyter
+ipykernel
+matplotlib
+numpy
