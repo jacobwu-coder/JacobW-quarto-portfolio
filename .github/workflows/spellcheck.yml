@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run cspell
-        uses: cspell/cspell-action@v1
+        uses: streetsidesoftware/cspell-action@v2
         with:
           args: "--verbose '**/*.qmd' '**/*.md'"
