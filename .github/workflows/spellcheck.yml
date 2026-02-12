@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run check-spelling
-        uses: check-spelling/action@v4
+        uses: check-spelling/action@v5
         with:
           # default configuration; the action will create suggestions for unknown words
           # configure locale or dictionaries via .github/spelling if needed
