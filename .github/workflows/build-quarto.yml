@@ -1,0 +1,30 @@
+name: Build Quarto Site
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml jupyter ipykernel matplotlib numpy
+      - name: Render site
+        run: quarto render index.qmd --to html --output index.html
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: quarto-site
+          path: index.html
