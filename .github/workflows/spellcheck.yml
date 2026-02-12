@@ -10,9 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run check-spelling
-        uses: check-spelling/action@v5
+      - name: Run cspell
+        uses: cspell/cspell-action@v1
         with:
-          # default configuration; the action will create suggestions for unknown words
-          # configure locale or dictionaries via .github/spelling if needed
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          args: "--verbose '**/*.qmd' '**/*.md'"
