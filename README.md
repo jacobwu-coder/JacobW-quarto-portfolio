@@ -5,3 +5,5 @@
 
 My Quarto data visualization portfolio
 
+
+[![Site](https://jacobwu-coder.github.io/JacobW-quarto-portfolio/favicon.ico)](https://jacobwu-coder.github.io/JacobW-quarto-portfolio/)
