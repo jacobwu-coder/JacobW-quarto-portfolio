@@ -114,6 +114,8 @@ funStuffs is a playground for small coding projects (AI-assisted). Key informati
 
 Repository link: https://github.com/jacobwu-coder/funStuffs (submodule path: external/funStuff)
 
+Related site: https://bluehen-dssa.org/
+
 **Tools & notable scripts in funStuffs**
 - todo/ → https://github.com/jacobwu-coder/funStuffs/tree/main/todo
 - experiments/ → https://github.com/jacobwu-coder/funStuffs/tree/main/experiments
