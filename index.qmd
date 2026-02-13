@@ -144,6 +144,9 @@ Links & resources:
 
 ## funStuff — linked projects and examples
 
+![funStuffs representative image](assets/images/funstuff_repr.jpg){fig-alt="funStuffs representative image" style="max-width:320px; height:auto;"}
+
+
 I am a FSAN student. Learn more about the program at the University of Delaware: https://lerner.udel.edu/academics/graduate-programs/financial-analytics/
 
 **About funStuffs**
