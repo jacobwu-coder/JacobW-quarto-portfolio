@@ -10,7 +10,7 @@ execute:
 
 # Welcome to My Portfolio! 📊
 
-Hello! My nickname is [JacobW]. This is my Quarto data visualization portfolio showcasing my Python and matplotlib skills.
+Hello! My nickname is JacobW. This is my Quarto data visualization portfolio showcasing my Python and matplotlib skills.
 
 ## About This Portfolio
 
@@ -148,7 +148,14 @@ Related site: https://bluehen-dssa.org/
 
 
 
-**Personal note:** My son plays ice hockey with the Jr. Blue Hens youth club — details: https://www.jrbluehens.org/. Classmates and friends are welcome to come watch games or practice sessions; contact me for schedule and location. See also: https://www.usfigureskating.org/
+**Personal note:** My son plays ice hockey with the Jr. Blue Hens youth club — details: https://www.jrbluehens.org/. Classmates and friends are welcome to come watch games or practice sessions; contact me for schedule and location.
+
+I am also a fan of the U.S. Figure Skating team: https://www.usfigureskating.org/.
+
+Here is Diamond, our Weimaraner:
+
+![](assets/images/diamond.jpg){fig-alt="Diamond the Weimaraner" style="max-width:320px; height:auto;"}
+ See also: https://www.usfigureskating.org/
 
 **Example plot from funStuffs**
 
