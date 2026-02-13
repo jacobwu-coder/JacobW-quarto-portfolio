@@ -93,3 +93,40 @@ If funStuff produces images, you can reference them directly from the submodule 
 ## Conclusion
 
 This demonstrates how Quarto can seamlessly integrate Python code and visualizations into professional documents that can be hosted publicly on GitHub Pages!
+
+
+----
+
+## funStuff — linked projects and examples
+
+I am a FSAN student. Learn more about the program at the University of Delaware: https://lerner.udel.edu/academics/graduate-programs/financial-analytics/
+
+**About funStuffs**
+
+funStuffs is a playground for small coding projects (AI-assisted). Key information (from the funStuffs README):
+
+- Overview: repository for small, focused projects generated and maintained with Codex + OpenClaw assistance. Local-first, modular, and documented.
+- Current subprojects include:
+  - todo/ — simple CLI todo app (usage: python -m todo add "Buy milk"). Data file: ~/.local/share/funstuff/todos.json
+  - experiments/ — experiments in retrieval & summarization (e.g., experiments/topic_summarizer.py which demonstrates local qmd retrieval + OpenAI summarization)
+  - web/ — tiny web demos (Flask/Static)
+  - tools/ — small CLI utilities (git helpers, data cleaners)
+
+Repository link: https://github.com/jacobwu-coder/funStuffs (submodule path: external/funStuff)
+
+Related site: https://bluehen-dssa.org/
+
+**Tools & notable scripts in funStuffs**
+- todo/ → https://github.com/jacobwu-coder/funStuffs/tree/main/todo
+- experiments/ → https://github.com/jacobwu-coder/funStuffs/tree/main/experiments
+- web/ → https://github.com/jacobwu-coder/funStuffs/tree/main/web
+- tools/ → https://github.com/jacobwu-coder/funStuffs/tree/main/tools
+
+
+
+**Personal note:** My son plays ice hockey with the Jr. Blue Hens youth club — details: https://www.jrbluehens.org/. Classmates and friends are welcome to come watch games or practice sessions; contact me for schedule and location.
+
+**Example plot from funStuffs**
+
+![](external/funStuff/plots/example_plot.png){fig-alt="Example plot from funStuffs"}
+
