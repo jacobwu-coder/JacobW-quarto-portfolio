@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run cspell
-        uses: cspell/cspell-action@v1
+      - name: Run cspell via action
+        uses: streetsidesoftware/cspell-action@v6
         with:
-          args: "--verbose '**/*.qmd' '**/*.md'"
+          args: "**/*.qmd **/*.md"
