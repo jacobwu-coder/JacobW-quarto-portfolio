@@ -97,6 +97,30 @@ This demonstrates how Quarto can seamlessly integrate Python code and visualizat
 
 ----
 
+
+----
+
+## Gallery: funStuffs outputs
+
+A small gallery of outputs from funStuffs (click images to open full size):
+
+```{=html}
+<div class="gallery" style="display:flex;gap:1rem;flex-wrap:wrap;">
+```
+
+```{python}
+from pathlib import Path
+import html
+imgs = sorted(Path('external/funStuff/plots').glob('*.png'))
+for img in imgs:
+    print(f'<a href="{img.as_posix()}" target="_blank"><img src="{img.as_posix()}" alt="{html.escape(img.name)}" style="max-width:240px;height:auto;border:1px solid #ddd;padding:4px;border-radius:4px;"></a>')
+```
+
+```{=html}
+</div>
+```
+
+
 ## funStuff — linked projects and examples
 
 I am a FSAN student. Learn more about the program at the University of Delaware: https://lerner.udel.edu/academics/graduate-programs/financial-analytics/
@@ -124,7 +148,7 @@ Related site: https://bluehen-dssa.org/
 
 
 
-**Personal note:** My son plays ice hockey with the Jr. Blue Hens youth club — details: https://www.jrbluehens.org/. Classmates and friends are welcome to come watch games or practice sessions; contact me for schedule and location.
+**Personal note:** My son plays ice hockey with the Jr. Blue Hens youth club — details: https://www.jrbluehens.org/. Classmates and friends are welcome to come watch games or practice sessions; contact me for schedule and location. See also: https://www.usfigureskating.org/
 
 **Example plot from funStuffs**
 
