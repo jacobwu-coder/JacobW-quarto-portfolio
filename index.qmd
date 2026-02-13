@@ -121,6 +121,27 @@ for img in imgs:
 ```
 
 
+
+
+----
+
+## About Jacob
+
+I am a UD FSAN student (M.S. in Financial Services Analytics) currently expanding my data science and visualization skills. I have 28 years of experience in Telecom and IT — starting as a developer and later focusing on program management and solution sales for the past 20 years. I've had the privilege of visiting more than 30 countries worldwide.
+
+Family & Interests: my daughter and son both play ice hockey; my son plays with the UD Jr. Blue Hens club. I am also a fan of the U.S. Figure Skating team. I practice Stoic philosophy in daily life and reflect those values in my work and learning. We have a Weimaraner named Diamond — I walk him about 2 hours per day.
+
+Why funStuffs: I use this funStuffs playground to record and showcase what I'm learning outside the FSAN program — small projects, experiments, and utilities that help me practice coding, data visualization, and reproducible work.
+
+Links & resources:
+
+- Blue Hen DSSA: https://bluehen-dssa.org/
+- Jr. Blue Hens: https://www.jrbluehens.org/
+- U.S. Figure Skating: https://www.usfigureskating.org/
+- Diamond (photo below)
+- Stoicism image and a representative portrait for "a 50-year-old man practicing Stoicism" are shown below as examples.
+
+
 ## funStuff — linked projects and examples
 
 I am a FSAN student. Learn more about the program at the University of Delaware: https://lerner.udel.edu/academics/graduate-programs/financial-analytics/
