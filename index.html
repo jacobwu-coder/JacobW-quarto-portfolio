@@ -101,7 +101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="welcome-to-my-portfolio" class="level1">
 <h1>Welcome to My Portfolio! 📊</h1>
-<p>Hello! My nickname is [JacobW]. This is my Quarto data visualization portfolio showcasing my Python and matplotlib skills.</p>
+<p>Hello! My nickname is JacobW. This is my Quarto data visualization portfolio showcasing my Python and matplotlib skills.</p>
 <section id="about-this-portfolio" class="level2">
 <h2 class="anchored" data-anchor-id="about-this-portfolio">About This Portfolio</h2>
 <p>This portfolio demonstrates how Quarto can seamlessly integrate Python code and visualizations into professional documents. Each chart below is created using matplotlib and embedded directly into this document.</p>
@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="simple-line-chart" class="level2">
 <h2 class="anchored" data-anchor-id="simple-line-chart">Simple Line Chart</h2>
 <p>Let’s create a simple line chart showing some sample data:</p>
-<div id="a076ea53" class="cell" data-execution_count="1">
+<div id="2f9c1915" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -138,7 +138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="bar-chart-example" class="level2">
 <h2 class="anchored" data-anchor-id="bar-chart-example">Bar Chart Example</h2>
 <p>Here’s a bar chart showing some sample data:</p>
-<div id="9f3557be" class="cell" data-execution_count="2">
+<div id="c6ffee48" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample data for bar chart</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>, <span class="st">'E'</span>]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> [<span class="dv">23</span>, <span class="dv">45</span>, <span class="dv">56</span>, <span class="dv">78</span>, <span class="dv">32</span>]</span>
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="scatter-plot-example" class="level2">
 <h2 class="anchored" data-anchor-id="scatter-plot-example">Scatter Plot Example</h2>
 <p>A scatter plot with random data points:</p>
-<div id="57382a97" class="cell" data-execution_count="3">
+<div id="a9b5260b" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random data for scatter plot</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>n_points <span class="op">=</span> <span class="dv">80</span></span>
@@ -200,6 +200,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>This demonstrates how Quarto can seamlessly integrate Python code and visualizations into professional documents that can be hosted publicly on GitHub Pages!</p>
 <hr>
+<hr>
+</section>
+<section id="gallery-funstuffs-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="gallery-funstuffs-outputs">Gallery: funStuffs outputs</h2>
+<p>A small gallery of outputs from funStuffs (click images to open full size):</p>
+<div class="gallery" style="display:flex;gap:1rem;flex-wrap:wrap;">
+<div id="9c50867c" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> html</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>imgs <span class="op">=</span> <span class="bu">sorted</span>(Path(<span class="st">'external/funStuff/plots'</span>).glob(<span class="st">'*.png'</span>))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> img <span class="kw">in</span> imgs:</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'&lt;a href="</span><span class="sc">{</span>img<span class="sc">.</span>as_posix()<span class="sc">}</span><span class="ss">" target="_blank"&gt;&lt;img src="</span><span class="sc">{</span>img<span class="sc">.</span>as_posix()<span class="sc">}</span><span class="ss">" alt="</span><span class="sc">{</span>html<span class="sc">.</span>escape(img.name)<span class="sc">}</span><span class="ss">" style="max-width:240px;height:auto;border:1px solid #ddd;padding:4px;border-radius:4px;"&gt;&lt;/a&gt;'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
 </section>
 <section id="funstuff-linked-projects-and-examples" class="level2">
 <h2 class="anchored" data-anchor-id="funstuff-linked-projects-and-examples">funStuff — linked projects and examples</h2>
@@ -220,6 +234,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Related site: https://bluehen-dssa.org/</p>
 <p><strong>Tools &amp; notable scripts in funStuffs</strong> - todo/ → https://github.com/jacobwu-coder/funStuffs/tree/main/todo - experiments/ → https://github.com/jacobwu-coder/funStuffs/tree/main/experiments - web/ → https://github.com/jacobwu-coder/funStuffs/tree/main/web - tools/ → https://github.com/jacobwu-coder/funStuffs/tree/main/tools</p>
 <p><strong>Personal note:</strong> My son plays ice hockey with the Jr.&nbsp;Blue Hens youth club — details: https://www.jrbluehens.org/. Classmates and friends are welcome to come watch games or practice sessions; contact me for schedule and location.</p>
+<p>I am also a fan of the U.S. Figure Skating team: https://www.usfigureskating.org/.</p>
+<p>Here is Diamond, our Weimaraner:</p>
+<p><img src="assets/images/diamond.jpg" class="img-fluid" style="max-width:320px; height:auto;" alt="Diamond the Weimaraner"> See also: https://www.usfigureskating.org/</p>
 <p><strong>Example plot from funStuffs</strong></p>
 <p><img src="external/funStuff/plots/example_plot.png" class="img-fluid" alt="Example plot from funStuffs"></p>
 </section>
