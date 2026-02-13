@@ -69,7 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-1d090f757e2aa3c57a39f7a6ee6efa83.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="simple-line-chart" class="level2">
 <h2 class="anchored" data-anchor-id="simple-line-chart">Simple Line Chart</h2>
 <p>Let’s create a simple line chart showing some sample data:</p>
-<div id="f224b558" class="cell" data-execution_count="1">
+<div id="69c2d78f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -138,7 +138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="bar-chart-example" class="level2">
 <h2 class="anchored" data-anchor-id="bar-chart-example">Bar Chart Example</h2>
 <p>Here’s a bar chart showing some sample data:</p>
-<div id="1d102022" class="cell" data-execution_count="2">
+<div id="6fd58009" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample data for bar chart</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>, <span class="st">'E'</span>]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> [<span class="dv">23</span>, <span class="dv">45</span>, <span class="dv">56</span>, <span class="dv">78</span>, <span class="dv">32</span>]</span>
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="scatter-plot-example" class="level2">
 <h2 class="anchored" data-anchor-id="scatter-plot-example">Scatter Plot Example</h2>
 <p>A scatter plot with random data points:</p>
-<div id="3c583b8d" class="cell" data-execution_count="3">
+<div id="972ed6a3" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random data for scatter plot</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>n_points <span class="op">=</span> <span class="dv">80</span></span>
@@ -199,6 +199,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>This demonstrates how Quarto can seamlessly integrate Python code and visualizations into professional documents that can be hosted publicly on GitHub Pages!</p>
+<hr>
+</section>
+<section id="funstuff-linked-projects-and-examples" class="level2">
+<h2 class="anchored" data-anchor-id="funstuff-linked-projects-and-examples">funStuff — linked projects and examples</h2>
+<p>I am a FSAN student. Learn more about the program at the University of Delaware: https://lerner.udel.edu/academics/graduate-programs/financial-analytics/</p>
+<p><strong>About funStuffs</strong></p>
+<p>funStuffs is a playground for small coding projects (AI-assisted). Key information (from the funStuffs README):</p>
+<ul>
+<li>Overview: repository for small, focused projects generated and maintained with Codex + OpenClaw assistance. Local-first, modular, and documented.</li>
+<li>Current subprojects include:
+<ul>
+<li>todo/ — simple CLI todo app (usage: python -m todo add “Buy milk”). Data file: ~/.local/share/funstuff/todos.json</li>
+<li>experiments/ — experiments in retrieval &amp; summarization (e.g., experiments/topic_summarizer.py which demonstrates local qmd retrieval + OpenAI summarization)</li>
+<li>web/ — tiny web demos (Flask/Static)</li>
+<li>tools/ — small CLI utilities (git helpers, data cleaners)</li>
+</ul></li>
+</ul>
+<p>Repository link: https://github.com/jacobwu-coder/funStuffs (submodule path: external/funStuff)</p>
+<p>Related site: https://bluehen-dssa.org/</p>
+<p><strong>Tools &amp; notable scripts in funStuffs</strong> - todo/ → https://github.com/jacobwu-coder/funStuffs/tree/main/todo - experiments/ → https://github.com/jacobwu-coder/funStuffs/tree/main/experiments - web/ → https://github.com/jacobwu-coder/funStuffs/tree/main/web - tools/ → https://github.com/jacobwu-coder/funStuffs/tree/main/tools</p>
+<p><strong>Personal note:</strong> My son plays ice hockey with the Jr.&nbsp;Blue Hens youth club — details: https://www.jrbluehens.org/. Classmates and friends are welcome to come watch games or practice sessions; contact me for schedule and location.</p>
+<p><strong>Example plot from funStuffs</strong></p>
+<p><img src="external/funStuff/plots/example_plot.png" class="img-fluid" alt="Example plot from funStuffs"></p>
 </section>
 </section>
 
