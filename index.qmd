@@ -159,5 +159,5 @@ Here is Diamond, our Weimaraner:
 
 **Example plot from funStuffs**
 
-![](external/funStuff/plots/example_plot.png){fig-alt="Example plot from funStuffs"}
+![](external/funStuff/plots/example_plot.png?v=20260212T210155){fig-alt="Example plot from funStuffs"}
 
