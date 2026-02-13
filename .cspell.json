@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "JacobW",
+    "Quarto",
+    "funStuffs",
+    "funStuff",
+    "Diamond",
+    "Tiki",
+    "Yat",
+    "Tik",
+    "Sheung",
+    "Chak",
+    "FSAN",
+    "DSSA",
+    "BlueHen",
+    "BlueHens",
+    "jrbluehens",
+    "jrbluehens.org",
+    "UD",
+    "Weimaraner"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "**/index_files/**"
+  ]
+}
