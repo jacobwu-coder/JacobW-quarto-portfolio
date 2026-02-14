@@ -22,7 +22,16 @@
     "Weimaraner"
   ],
   "ignorePaths": [
-    "node_modules/**",
-    "**/index_files/**"
+    "node_modules",
+    ".git"
+  ],
+  "patterns": [
+    {
+      "name": "markdown-code-blocks",
+      "pattern": "/^(\\s*`{3,})[\\s\\S]*?^\\1/gm"
+    }
+  ],
+  "ignoreRegExpList": [
+    "markdown-code-blocks"
   ]
 }
