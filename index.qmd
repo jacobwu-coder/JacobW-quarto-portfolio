@@ -83,13 +83,6 @@ plt.grid(True, alpha=0.3)
 plt.show()
 ```
 
-
-## Example: include image from funStuff submodule
-
-If funStuff produces images, you can reference them directly from the submodule path. Example (replace with actual file path):
-
-![](external/funStuff/path/to/image.png){fig-alt="Example plot from funStuff"}
-
 ## Conclusion
 
 This demonstrates how Quarto can seamlessly integrate Python code and visualizations into professional documents that can be hosted publicly on GitHub Pages!
