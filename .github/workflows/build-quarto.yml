@@ -7,6 +7,78 @@ pull_request:
 branches: [ main ]
 
 jobs:
+<<<<<<< HEAD
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      - name: Fetch funStuffs plots artifact via API (Python)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - << 'PY'
+import os, requests, zipfile, io
+G='https://api.github.com'
+owner='jacobwu-coder'
+repo='funStuffs'
+workflow_name='Build and Upload Plots'
+artifact_name='funstuff-plots'
+headers={'Authorization':f'token {os.environ.get("GITHUB_TOKEN")}', 'Accept':'application/vnd.github.v3+json'}
+# find latest successful workflow run by name
+runs_url=f'{G}/repos/{owner}/{repo}/actions/runs'
+r=requests.get(runs_url, headers=headers, timeout=30)
+if r.status_code!=200:
+    print('Failed to list runs', r.status_code); raise SystemExit(0)
+data=r.json()
+run_id=None
+for run in data.get('workflow_runs',[]):
+    if run.get('name')==workflow_name and run.get('conclusion')=='success':
+        run_id=run.get('id'); break
+if not run_id:
+    print('No successful run found for', workflow_name)
+    raise SystemExit(0)
+print('Found run', run_id)
+artifacts_url=f'{G}/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts'
+r=requests.get(artifacts_url, headers=headers, timeout=30)
+if r.status_code!=200:
+    print('Failed to list artifacts', r.status_code); raise SystemExit(0)
+arts=r.json().get('artifacts',[])
+artifact_id=None
+for a in arts:
+    if a.get('name')==artifact_name:
+        artifact_id=a.get('id'); break
+if not artifact_id:
+    print('Artifact not found in run')
+    raise SystemExit(0)
+print('Found artifact', artifact_id)
+download_url=f'{G}/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/zip'
+rr=requests.get(download_url, headers=headers, timeout=60, stream=True)
+if rr.status_code!=200:
+    print('Failed to download artifact', rr.status_code); raise SystemExit(0)
+# extract zip into external/funStuff/plots
+os.makedirs('external/funStuff/plots', exist_ok=True)
+with zipfile.ZipFile(io.BytesIO(rr.content)) as z:
+    z.extractall('external/funStuff/plots')
+print('Extracted artifact to external/funStuff/plots')
+PY
+      - name: Render site
+        run: quarto render index.qmd --to html --output index.html
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: quarto-site
+          path: index.html
+=======
 build:
 runs-on: ubuntu-latest
 steps:
@@ -64,3 +136,4 @@ steps:
     with:
       name: quarto-site
       path: index.html
+>>>>>>> origin/main
