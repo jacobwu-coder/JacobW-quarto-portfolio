@@ -20,15 +20,45 @@ uses: quarto-dev/quarto-actions/setup@v2
 run: |
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-- name: Download funStuff plots artifact
-uses: actions/download-artifact@v4
-with:
-name: funstuff-plots
-path: external/funStuff/plots
-- name: Render site
-run: quarto render index.qmd --to html --output index.html
-- name: Upload artifact
-uses: actions/upload-artifact@v4
-with:
-name: quarto-site
-path: index.html
+
+
+- name: Fetch funStuffs plots artifact from funStuffs repo
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    run: |
+      set -euo pipefail
+      repo_owner=jacobwu-coder
+      repo_name=funStuffs
+      workflow_name="Build and Upload Plots"
+      artifact_name="funstuff-plots"
+
+      echo "Finding last successful workflow run in $repo_owner/$repo_name for workflow '$workflow_name'..."
+      runs_url="https://api.github.com/repos/${repo_owner}/${repo_name}/actions/runs"
+      run_id=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "$runs_url" | jq -r ".workflow_runs[] | select(.name==\"$workflow_name\" and .conclusion==\"success\") | .id" | head -n1)
+      if [ -z "$run_id" ]; then
+        echo "No successful workflow run found for $workflow_name in $repo_owner/$repo_name. Continuing without plots."
+        exit 0
+      fi
+      echo "Found run id $run_id. Listing artifacts..."
+      artifacts_url="https://api.github.com/repos/${repo_owner}/${repo_name}/actions/runs/${run_id}/artifacts"
+      artifact_id=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "$artifacts_url" | jq -r ".artifacts[] | select(.name==\"$artifact_name\") | .id")
+      if [ -z "$artifact_id" ]; then
+        echo "Artifact $artifact_name not found in run $run_id. Continuing without plots."
+        exit 0
+      fi
+      echo "Found artifact id $artifact_id. Downloading..."
+      download_url="https://api.github.com/repos/${repo_owner}/${repo_name}/actions/artifacts/${artifact_id}/zip"
+      mkdir -p external/funStuff/plots
+      curl -L -H "Authorization: token $GITHUB_TOKEN" -o /tmp/${artifact_name}.zip "$download_url"
+      echo "Unzipping artifact..."
+      unzip -o /tmp/${artifact_name}.zip -d external/funStuff/plots || true
+      echo "Done: artifact extracted to external/funStuff/plots"
+
+  - name: Render site
+    run: quarto render index.qmd --to html --output index.html
+
+  - name: Upload artifact
+    uses: actions/upload-artifact@v4
+    with:
+      name: quarto-site
+      path: index.html
