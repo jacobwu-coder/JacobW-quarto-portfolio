@@ -79,7 +79,7 @@ jobs:
           PY
 
       - name: Render site
-        run: quarto render index.qmd --to html --output index.html
+        run: quarto render
 
       - name: Commit and Push (Built Site)
         env:
@@ -91,7 +91,7 @@ jobs:
           # Use a temporary branch to avoid direct main conflicts
           git checkout -b built-index || git switch built-index
           
-          git add index.html
+          git add index.html content/*.html
           if [ -d external/funStuffs/plots ]; then
             git add external/funStuffs/plots
           fi
