@@ -3,20 +3,24 @@ name: Build Quarto Site
 on:
   push:
     branches: [ main ]
-  pull_request:
+  pull_request:    
     branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
       - name: Install Python deps
         run: |
           python -m pip install --upgrade pip
@@ -74,35 +78,32 @@ with zipfile.ZipFile(io.BytesIO(rr.content)) as z:
 print('Extracted artifact to external/funStuffs/plots')
 PY
 
-      - name: Ensure plots copied into repo root for publish
-        run: |
-          if [ -d external/funStuffs/plots ]; then
-            # list to confirm presence
-            ls -la external/funStuffs/plots || true
-          fi
-
       - name: Render site
         run: quarto render index.qmd --to html --output index.html
 
-      - name: Commit built index.html and plots back to repo
+      - name: Commit and Push (Built Site)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Use a temporary branch to avoid direct main conflicts
           git checkout -b built-index || git switch built-index
-          # stage plots if present
-          if [ -d external/funStuffs/plots ]; then
-            git add external/funStuffs/plots || true
-          fi
+          
           git add index.html
+          if [ -d external/funStuffs/plots ]; then
+            git add external/funStuffs/plots
+          fi
+
           if git diff --quiet --cached; then
             echo "No changes to commit"
           else
-            git commit -m "ci: update built site (index + funStuffs plots) [skip ci]"
+            git commit -m "ci: update built site (index + plots) [skip ci]"
             git push origin built-index --force
-            gh pr create --title "chore: update built site" --body "Automatic update of built site (index + funStuffs plots) from CI" --base main --head built-index || true
+            # Note: PR creation requires the 'pull-requests: write' permission in the GITHUB_TOKEN
+            gh pr create --title "chore: update built site" --body "Auto-update from CI" --base main --head built-index || echo "PR already exists"
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
