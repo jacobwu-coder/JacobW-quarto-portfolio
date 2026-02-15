@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="example-include-image-from-funstuff-submodule" class="level2">
 <h2 class="anchored" data-anchor-id="example-include-image-from-funstuff-submodule">Example: include image from funStuff submodule</h2>
 <p>If funStuff produces images, you can reference them directly from the submodule path. Example (replace with actual file path):</p>
-<p><img src="external/funStuffs/path/to/image.png" class="img-fluid" alt="Example plot from funStuff"></p>
+<p><img src="external/funStuff/path/to/image.png" class="img-fluid" alt="Example plot from funStuff"></p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
@@ -216,12 +216,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>tools/ — small CLI utilities (git helpers, data cleaners)</li>
 </ul></li>
 </ul>
-<p>Repository link: https://github.com/jacobwu-coder/funStuffs (submodule path: external/funStuffs)</p>
+<p>Repository link: https://github.com/jacobwu-coder/funStuffs (submodule path: external/funStuff)</p>
 <p>Related site: https://bluehen-dssa.org/</p>
 <p><strong>Tools &amp; notable scripts in funStuffs</strong> - todo/ → https://github.com/jacobwu-coder/funStuffs/tree/main/todo - experiments/ → https://github.com/jacobwu-coder/funStuffs/tree/main/experiments - web/ → https://github.com/jacobwu-coder/funStuffs/tree/main/web - tools/ → https://github.com/jacobwu-coder/funStuffs/tree/main/tools</p>
 <p><strong>Personal note:</strong> My son plays ice hockey with the Jr.&nbsp;Blue Hens youth club — details: https://www.jrbluehens.org/. Classmates and friends are welcome to come watch games or practice sessions; contact me for schedule and location.</p>
 <p><strong>Example plot from funStuffs</strong></p>
-<p><img src="external/funStuffs/plots/example_plot.png" class="img-fluid" alt="Example plot from funStuffs"></p>
+<p><img src="external/funStuff/plots/example_plot.png" class="img-fluid" alt="Example plot from funStuffs"></p>
 </section>
 </section>
 

@@ -97,7 +97,7 @@ This demonstrates how Quarto can seamlessly integrate Python code and visualizat
 
 
 <div class="gallery" style="display:flex;gap:1rem;flex-wrap:wrap;">
-<a href="external/funStuff/plots/example_plot.png" target="_blank"><img src="external/funStuff/plots/example_plot.png" alt="example_plot.png" style="max-width:240px;height:auto;border:1px solid #ddd;padding:4px;border-radius:4px;"></a>
+<a href="external/funStuffs/plots/example_plot.png" target="_blank"><img src="external/funStuffs/plots/example_plot.png" alt="example_plot.png" style="max-width:240px;height:auto;border:1px solid #ddd;padding:4px;border-radius:4px;"></a>
 </div>
 
 ## funStuff — linked projects and examples
@@ -118,7 +118,7 @@ funStuffs is a playground for small coding projects (AI-assisted). Key informati
   - web/ — tiny web demos (Flask/Static)
   - tools/ — small CLI utilities (git helpers, data cleaners)
 
-Repository link: https://github.com/jacobwu-coder/funStuffs (submodule path: external/funStuff)
+Repository link: https://github.com/jacobwu-coder/funStuffs (submodule path: external/funStuffs)
 
 Related site: https://bluehen-dssa.org/
 
@@ -141,5 +141,5 @@ Here is Diamond, our Weimaraner:
 
 **Example plot from funStuffs**
 
-![](external/funStuff/plots/example_plot.png?v=20260212T210410){fig-alt="Example plot from funStuffs"}
+![](external/funStuffs/plots/example_plot.png?v=20260212T210410){fig-alt="Example plot from funStuffs"}
 
