@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>My Data Visualization Portfolio</title>
+<title>bible-study</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,56 +20,21 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="index_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="index_files/libs/quarto-html/anchor.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-1d090f757e2aa3c57a39f7a6ee6efa83.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="bible-study_files/libs/clipboard/clipboard.min.js"></script>
+<script src="bible-study_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="bible-study_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="bible-study_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="bible-study_files/libs/quarto-html/popper.min.js"></script>
+<script src="bible-study_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="bible-study_files/libs/quarto-html/anchor.min.js"></script>
+<link href="bible-study_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="bible-study_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="bible-study_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="bible-study_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="bible-study_files/libs/bootstrap/bootstrap-1d090f757e2aa3c57a39f7a6ee6efa83.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -80,161 +45,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">My Data Visualization Portfolio</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="welcome-to-my-portfolio" class="level1">
-<h1>Welcome to My Portfolio! 📊</h1>
-<p>Hello! My nickname is JacobW. This is my Quarto data visualization portfolio showcasing my Python and matplotlib skills.</p>
-<section id="about-this-portfolio" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-portfolio">About This Portfolio</h2>
-<p>This portfolio demonstrates how Quarto can seamlessly integrate Python code and visualizations into professional documents. Each chart below is created using matplotlib and embedded directly into this document.</p>
-</section>
-<section id="simple-line-chart" class="level2">
-<h2 class="anchored" data-anchor-id="simple-line-chart">Simple Line Chart</h2>
-<p>Let’s create a simple line chart showing some sample data:</p>
-<div id="e80432c9" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create sample data</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">100</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.sin(x)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="fl">4.75</span>))</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, <span class="st">'b-'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'sin(x)'</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X values'</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Y values'</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'My First Matplotlib Chart'</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-2-output-1.png" width="608" height="431" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="bar-chart-example" class="level2">
-<h2 class="anchored" data-anchor-id="bar-chart-example">Bar Chart Example</h2>
-<p>Here’s a bar chart showing some sample data:</p>
-<div id="062e3b29" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample data for bar chart</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>, <span class="st">'E'</span>]</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> [<span class="dv">23</span>, <span class="dv">45</span>, <span class="dv">56</span>, <span class="dv">78</span>, <span class="dv">32</span>]</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="fl">4.75</span>))</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>bars <span class="op">=</span> plt.bar(categories, values, color<span class="op">=</span>[<span class="st">'red'</span>, <span class="st">'green'</span>, <span class="st">'blue'</span>, <span class="st">'orange'</span>, <span class="st">'purple'</span>])</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Categories'</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Values'</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Sample Bar Chart'</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Add value labels on bars</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> bar, value <span class="kw">in</span> <span class="bu">zip</span>(bars, values):</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    plt.text(bar.get_x() <span class="op">+</span> bar.get_width()<span class="op">/</span><span class="dv">2</span>, bar.get_height() <span class="op">+</span> <span class="dv">1</span>, </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>             <span class="bu">str</span>(value), ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-3-output-1.png" width="585" height="431" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="scatter-plot-example" class="level2">
-<h2 class="anchored" data-anchor-id="scatter-plot-example">Scatter Plot Example</h2>
-<p>A scatter plot with random data points:</p>
-<div id="6563d77a" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random data for scatter plot</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>n_points <span class="op">=</span> <span class="dv">80</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>x_rand <span class="op">=</span> np.random.randn(n_points) <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">5</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>y_rand <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> x_rand <span class="op">+</span> np.random.randn(n_points) <span class="op">*</span> <span class="dv">3</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="fl">4.75</span>))</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.scatter(x_rand, y_rand, c<span class="op">=</span>np.arange(n_points), cmap<span class="op">=</span><span class="st">'viridis'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, s<span class="op">=</span><span class="dv">50</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'X values'</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Y values'</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Random Data Scatter Plot'</span>)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.colorbar(label<span class="op">=</span><span class="st">'Point index'</span>)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-4-output-1.png" width="581" height="431" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>This demonstrates how Quarto can seamlessly integrate Python code and visualizations into professional documents that can be hosted publicly on GitHub Pages!</p>
-<hr>
-<hr>
-</section>
-<section id="gallery-funstuffs-outputs" class="level2">
-<h2 class="anchored" data-anchor-id="gallery-funstuffs-outputs">Gallery: funStuffs outputs</h2>
-<div class="gallery" style="display:flex;gap:1rem;flex-wrap:wrap;">
-<p><a href="external/funStuffs/plots/example_plot.png" target="_blank"><img src="external/funStuffs/plots/example_plot.png" alt="example_plot.png" style="max-width:240px;height:auto;border:1px solid #ddd;padding:4px;border-radius:4px;"></a></p>
-</div>
-</section>
-<section id="funstuff-linked-projects-and-examples" class="level2">
-<h2 class="anchored" data-anchor-id="funstuff-linked-projects-and-examples">funStuff — linked projects and examples</h2>
-<div class="quarto-figure quarto-figure-center" style="max-width:320px; height:auto;">
-<figure class="figure">
-<p><img src="assets/images/funstuff_repr.jpg" class="img-fluid figure-img" alt="funStuffs representative image"></p>
-<figcaption>funStuffs representative image</figcaption>
-</figure>
-</div>
-<p>I am a FSAN student. Learn more about the program at the University of Delaware: https://lerner.udel.edu/academics/graduate-programs/financial-analytics/</p>
-<p><strong>About funStuffs</strong></p>
-<p>funStuffs is a playground for small coding projects (AI-assisted). Key information (from the funStuffs README):</p>
-<ul>
-<li>Overview: repository for small, focused projects generated and maintained with Codex + OpenClaw assistance. Local-first, modular, and documented.</li>
-<li>Current subprojects include:
-<ul>
-<li>todo/ — simple CLI todo app (usage: python -m todo add “Buy milk”). Data file: ~/.local/share/funstuff/todos.json</li>
-<li>experiments/ — experiments in retrieval &amp; summarization (e.g., experiments/topic_summarizer.py which demonstrates local qmd retrieval + OpenAI summarization)</li>
-<li>web/ — tiny web demos (Flask/Static)</li>
-<li>tools/ — small CLI utilities (git helpers, data cleaners)</li>
-</ul></li>
-</ul>
-<p>Repository link: https://github.com/jacobwu-coder/funStuffs (submodule path: external/funStuffs)</p>
-<p>Related site: https://bluehen-dssa.org/</p>
-<p><strong>Tools &amp; notable scripts in funStuffs</strong> - todo/ → https://github.com/jacobwu-coder/funStuffs/tree/main/todo - experiments/ → https://github.com/jacobwu-coder/funStuffs/tree/main/experiments - web/ → https://github.com/jacobwu-coder/funStuffs/tree/main/web - tools/ → https://github.com/jacobwu-coder/funStuffs/tree/main/tools</p>
-<p><strong>Personal note:</strong> My son plays ice hockey with the Jr.&nbsp;Blue Hens youth club — details: https://www.jrbluehens.org/. Classmates and friends are welcome to come watch games or practice sessions; contact me for schedule and location.</p>
-<p>I am also a fan of the U.S. Figure Skating team: https://www.usfigureskating.org/.</p>
-<p>Here is Diamond, our Weimaraner:</p>
-<p><img src="assets/images/diamond.jpg" class="img-fluid" style="max-width:320px; height:auto;" alt="Diamond the Weimaraner"> See also: https://www.usfigureskating.org/</p>
-<p><strong>Example plot from funStuffs</strong></p>
-<p><img src="external/funStuffs/plots/example_plot.png?v=20260212T210410" class="img-fluid" alt="Example plot from funStuffs"></p>
-</section>
-</section>
+<pre><code>                   [ Cannot open file for writing: No such file or directory ]                        ...title: "Bible Study: Signs and Demand for Miracles"</code></pre>
+<p>format: html</p>
+<p>Passage (Chinese)</p>
+<p>当时，有几个文士和法利赛人对耶稣说：“夫子，我们愿意你显个神迹给我们看。”耶稣回答说：“一个邪恶淫乱的世代求看神迹，除了先知约拿的神迹以外，再没有神迹给他们看。”</p>
+<p>Passage (English, ESV)</p>
+<p>Then some of the scribes and Pharisees said to him, “Teacher, we wish to see a sign from you.” But he answered them, “An evil and adulterous generation seeks for a sign, but no sign will be given to it except the sign of the prophet Jonah.”</p>
+<p>Passage (English, NLT)</p>
+<p>Some teachers of religious law and Pharisees came and said to him, “Teacher, we want to see a miraculous sign from you.” He replied, “You evil people! You demand a miraculous sign, but none will be given to you except the sign of Jonah.”</p>
+<p>Context &amp; Short Commentary</p>
+<p>This exchange (Matthew 12:38-39 / parallels in Mark and Luke) captures a recurring theme: religious leaders demand spectacular proof, but Jesus emphasizes faith and points to the only sign that will be given — the sign of Jonah (his death, burial, and resurrection). The phrase “an evil and adulterous generation” is a strong rebuke; it highlights spiritual unfaithfulness rather than mere curiosity.</p>
+<p>Key points:</p>
+<p>• The request comes from scribes and Pharisees — religious insiders whose motive is often testing rather than genuine seeking. • Jesus reframes the debate: signs are not a substitute for repentance and trust. • The “sign of Jonah” prefigures Jesus’ own resurrection and invites deeper reflection on repentance and new life. Questions for Group Study</p>
+<ol type="1">
+<li>What do you think motivated the scribes and Pharisees to ask for a sign? Was there any constructive basis for their request?</li>
+<li>How does Jesus’ response change the focus of the conversation from display to heart condition?</li>
+<li>What does the “sign of Jonah” mean in this passage and how should it shape our understanding of Jesus’ mission?</li>
+<li>Can we identify modern examples where people look for signs instead of wrestling with faith and repentance? Short Reflection Exercise (5–10 minutes)</li>
+</ol>
+<p>• Read the passage silently. Then write one sentence: What is God inviting you to believe or change after reading this? Suggested Further Reading</p>
+<p>• Matthew 12:38–42; Jonah 1–2; Luke 11:29–32; Mark 8:11–13…</p>
 
 </main>
 <!-- /main column -->
