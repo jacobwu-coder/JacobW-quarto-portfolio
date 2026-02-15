@@ -65,18 +65,18 @@ download_url=f'{G}/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/zip'
 rr=requests.get(download_url, headers=headers, timeout=60, stream=True)
 if rr.status_code!=200:
     print('Failed to download artifact', rr.status_code); raise SystemExit(0)
-# extract zip into external/funStuff/plots
-os.makedirs('external/funStuff/plots', exist_ok=True)
+# extract zip into external/funStuffs/plots
+os.makedirs('external/funStuffs/plots', exist_ok=True)
 with zipfile.ZipFile(io.BytesIO(rr.content)) as z:
-    z.extractall('external/funStuff/plots')
-print('Extracted artifact to external/funStuff/plots')
+    z.extractall('external/funStuffs/plots')
+print('Extracted artifact to external/funStuffs/plots')
 PY
 
       - name: Ensure plots copied into repo root for publish
         run: |
-          if [ -d external/funStuff/plots ]; then
+          if [ -d external/funStuffs/plots ]; then
             # list to confirm presence
-            ls -la external/funStuff/plots || true
+            ls -la external/funStuffs/plots || true
           fi
 
       - name: Render site
@@ -88,8 +88,8 @@ PY
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b built-index || git switch built-index
           # stage plots if present
-          if [ -d external/funStuff/plots ]; then
-            git add external/funStuff/plots || true
+          if [ -d external/funStuffs/plots ]; then
+            git add external/funStuffs/plots || true
           fi
           git add index.html
           if git diff --quiet --cached; then
