@@ -79,7 +79,9 @@ jobs:
           PY
 
       - name: Render site
-        run: quarto render
+        run: |
+          quarto render index.qmd --to html --output index.html
+          quarto render content/bible-study.qmd --to html
 
       - name: Commit and Push (Built Site)
         env:
