@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: built-index
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
