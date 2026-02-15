@@ -91,6 +91,7 @@ jobs:
         run: |
           quarto render index.qmd --to html --output index.html
           quarto render content/bible-study.qmd --to html
+          quarto render content/the-bible.qmd --to html
 
       - name: Commit and Push (Built Site)
         env:
