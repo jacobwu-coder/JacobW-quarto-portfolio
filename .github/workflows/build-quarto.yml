@@ -31,7 +31,7 @@ import os, requests, zipfile, io
 G='https://api.github.com'
 owner='jacobwu-coder'
 repo='funStuffs'
-workflow_name='Build and Upload Plots'
+workflow_name='Generate and Upload DOT Plots'
 artifact_name='funstuff-plots'
 headers={'Authorization':f'token {os.environ.get("GITHUB_TOKEN")}', 'Accept':'application/vnd.github.v3+json'}
 # find latest successful workflow run by name
@@ -45,8 +45,10 @@ for run in data.get('workflow_runs',[]):
     if run.get('name')==workflow_name and run.get('conclusion')=='success':
         run_id=run.get('id'); break
 if not run_id:
-    print('No successful run found for', workflow_name)
-    raise SystemExit(0)
+    print('No successful run found for:', workflow_name)
+    print('Continuing without plots (non-fatal).')
+    import sys
+    sys.exit(0)
 print('Found run', run_id)
 artifacts_url=f'{G}/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts'
 r=requests.get(artifacts_url, headers=headers, timeout=30)
