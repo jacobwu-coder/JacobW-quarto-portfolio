@@ -3,3 +3,4 @@
 	url = git@github.com:jacobwu-coder/funStuff.git
 [submodule "external/funStuffs"]
 	url = git@github.com:jacobwu-coder/funStuffs.git
+	path = external/funStuffs
