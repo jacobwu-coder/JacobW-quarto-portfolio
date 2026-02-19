@@ -117,6 +117,7 @@ funStuffs is a playground for small coding projects (AI-assisted). Key informati
   - experiments/ — experiments in retrieval & summarization (e.g., experiments/topic_summarizer.py which demonstrates local qmd retrieval + OpenAI summarization)
   - web/ — tiny web demos (Flask/Static)
   - tools/ — small CLI utilities (git helpers, data cleaners)
+  - quant_demo/ — minimal CCXT grid strategy demo (located under external/funStuffs/quant_demo). Includes demo_grid.py, README.md, and requirements.txt. SAFE: LIVE mode disabled by default; intended for testnet or simulation only.
 
 Repository link: https://github.com/jacobwu-coder/funStuffs (submodule path: external/funStuffs)
 

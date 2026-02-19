@@ -1,29 +1,20 @@
 name: Publish Quarto site to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ built-index ]
 
 permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-      - name: Install Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-      - name: Install Python deps
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install pyyaml jupyter ipykernel matplotlib numpy
-      - name: Render site
-        run: quarto render index.qmd --to html --output index.html
+          ref: built-index
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

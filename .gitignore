@@ -1,0 +1,3 @@
+# Generated Quarto output (CI renders these; only .qmd source is committed)
+content/*.html
+content/*_files/
